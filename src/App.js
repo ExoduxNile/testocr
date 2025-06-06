@@ -40,7 +40,7 @@ function App() {
     setResults('Processing...');
 
     try {
-      const endpoint = activeTab === 'file' ? '/ocr/external' : '/ocr/url';
+      const endpoint = activeTab === 'file' ? '/ocr/upload' : '/ocr/url';
       const response = await fetch(`${BASE_URL}${endpoint}`, {
         method: 'POST',
         body: activeTab === 'file' ? formData : JSON.stringify(formData),
